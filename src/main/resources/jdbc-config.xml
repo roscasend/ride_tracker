@@ -11,7 +11,7 @@
 
 	<context:annotation-config />
 	<context:component-scan base-package="com.pluralsight" />
-
+	
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://localhost:3306/ride_tracker" />
@@ -19,7 +19,7 @@
 		<property name="password" value="f77b3cmvhk" />
 	</bean>
 
-	<bean id="jdbc-template" class="org.springframework.jdbc.core.JdbcTemplate">
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 
